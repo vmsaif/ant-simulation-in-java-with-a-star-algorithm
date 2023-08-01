@@ -1,4 +1,11 @@
-
+/* -----------------------------------------------------------------------------
+    Author: Saif Mahmud
+    Date: 2023-22-07
+    Course: COMP 452
+    Student ID: 3433058
+    Assignment: 2
+    Part: 2
+*/
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import javax.swing.JPanel;
@@ -53,8 +60,8 @@ public class AStarSearch extends JPanel {
                 while(neighbors.size() > 0){
                     Tile currNeighbor = neighbors.poll();
                                         
-                    // if neighbor is not in closedSet and not obstacle, then evaluate cost
-                    if(!closedSet.contains(currNeighbor)){
+                    // if neighbor is not in closedSet and not poison, then evaluate cost
+                    if(!closedSet.contains(currNeighbor) && !currNeighbor.isPoison()){
                         double tempCost = current.getG() + currNeighbor.getCost();
                         
                         // check for a better path

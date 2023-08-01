@@ -12,14 +12,18 @@
 
     The ants move randomly in their environment in an attempt to locate a piece of food.
     When an ant finds a piece of food, it returns to its home position. You can implement the path to its home position as you wish.
-    When an ant arrives home, it (a) becomes thirsty, (b) drops its food; and (c) starts a search for drinking water.
+    When an ant arrives home, it 
+    (a) becomes thirsty, 
+    (b) drops its food; and 
+    (c) starts a search for drinking water.
+
     Ants looking for water roam randomly in their environment in their attempt to find water.
     When an ant finds water, it drinks and then resumes its search for food.
     New ants are born in the colony. Every time an ant returns food to the home position, a new ant is added (born) to the team that will start a search for food.
     The ant population continues to grow as long as more food is brought home.
     The environment is a grilled area with cells that may be of different types: empty ground, food, water or poison.
     Food, water and poison are randomly placed in the environment.
-    Ants can walk safely on empty ground, food and water cells; however, any ant that steps on a poison cell must die.  
+    Ants can walk safely on empty ground, food and water cells; however, any ant that steps on a poison cell must die.
     The only thing the user has to specify is the starting number of ants in the colony. Food, water and poison should be generated and randomly distributed by the program.
     Ants must be roaming randomly when looking for food or water; otherwise, use your creativity to implement other movements (i.e., returning to the home position).
 */
@@ -43,8 +47,6 @@ public class Simulation extends JPanel {
     private final int NUM_COLS = 16;
     private Tile[][] tiles;
 
-    protected boolean startLocationSelectionMode;
-
     private ImageIcon foodImg;
     private ImageIcon waterImage;
     private ImageIcon poisonImage;
@@ -53,13 +55,15 @@ public class Simulation extends JPanel {
     private int probablityOfFood; 
     private int probablityOfPoison;
     private ArrayList<Ant> allAnts;
-    protected boolean stopSimulation; 
+    protected boolean stopSimulation;
+    private int gameSpeed; 
 
-    public Simulation(int antNumber) {
+    public Simulation(int antNumber, int gameSpeed) {
         
         probablityOfWater = 20; // 12%
         probablityOfFood = probablityOfWater/2; 
         probablityOfPoison = probablityOfFood/2;
+        this.gameSpeed = gameSpeed;
         // first load the images
         loadImages();
 
@@ -143,7 +147,7 @@ public class Simulation extends JPanel {
 
     // this method will check the simulation status
     public void updateComponents(){
-        Timer timer = new Timer(500, new ActionListener() {
+        Timer timer = new Timer(gameSpeed, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(allAnts != null && allAnts.size() > 0){
@@ -189,7 +193,7 @@ public class Simulation extends JPanel {
     }
 
     // this method will check if the ant is thirsty and is on a water tile. If so, the ant will drink water and will look for food.
-    // the water will not be removed from the tile.
+    // the water will be removed from the tile.
     private void checkThirsty() {
         if(allAnts.size() > 0){
             for(int i = 0; i < allAnts.size(); i++){

@@ -22,7 +22,7 @@ public class Ant {
     private int tileSize;
     private int direction;
 
-    private ImageIcon antImage;
+    private ImageIcon antSearchingFoodImage;
     private ImageIcon drawingImage;
     private ImageIcon antAndFood;
     private ImageIcon antLookingWater;
@@ -35,7 +35,6 @@ public class Ant {
     private boolean isThirsty;
     private boolean isLookingForFood;
     
-
 
     public Ant(Tile start, int tileSize, Tile[][] tiles) {
         this.home = start;
@@ -52,8 +51,8 @@ public class Ant {
 
     private void loadAntImg() {
         try {
-            antImage = new ImageIcon("ant.png");
-            drawingImage = antImage;
+            antSearchingFoodImage = new ImageIcon("ant.png");
+            drawingImage = antSearchingFoodImage;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -145,7 +144,7 @@ public class Ant {
     public void setLookingForFood(){
         isLookingForFood = true;
         dontMove = false;
-        drawingImage = antImage;
+        drawingImage = antSearchingFoodImage;
     }
 
     public void resetLookingForFood(){
@@ -163,7 +162,7 @@ public class Ant {
 
     public void resetThirsty(){
         this.isThirsty = false;
-        drawingImage = antImage;
+        drawingImage = antSearchingFoodImage;
     }
 
     public boolean wentHome(){
