@@ -36,10 +36,10 @@ The game uses a simple state machine to manage the different states of the game.
 ## Resources
 
 ### Images
-[Ant](https://www.pngegg.com/en/png-zblks)
-[food](https://www.pngegg.com/en/png-medpx)
-[poison](https://forums.episodeinteractive.com/t/green-magic-overlay/348539)
-[water](https://www.freepnglogos.com/images/water-drop-11843.html)
+- [Ant](https://www.pngegg.com/en/png-zblks)
+- [Food](https://www.pngegg.com/en/png-medpx)
+- [Poison](https://forums.episodeinteractive.com/t/green-magic-overlay/348539)
+- [Water](https://www.freepnglogos.com/images/water-drop-11843.html)
 
 ### Bugs:
 If too many ant spawns, it runs out of memory with this error:
