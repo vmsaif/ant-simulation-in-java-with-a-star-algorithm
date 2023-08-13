@@ -6,7 +6,7 @@
     Assignment: 2
     Part: 2
 */
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 import javax.swing.JPanel;
 
@@ -21,13 +21,13 @@ public class AStarSearch extends JPanel {
     }
     
     // search method
-    public ArrayList<Tile> search(Tile start, Tile goal) {
+    public LinkedList<Tile> search(Tile start, Tile goal) {
 
         this.start = start;
         this.goal = goal;
 
-        ArrayList<Tile> output = new ArrayList<>();
-        ArrayList<Tile> closedSet = new ArrayList<>();
+        LinkedList<Tile> output = new LinkedList<>();
+        LinkedList<Tile> closedSet = new LinkedList<>();
         
         // create openSet and add start to it 
         PriorityQueue<Tile> openSet = new PriorityQueue<Tile>();
@@ -170,8 +170,8 @@ public class AStarSearch extends JPanel {
     }
     
     // reconstruct path from start to goal
-    public ArrayList<Tile> reconstructPath(Tile current) {
-        ArrayList<Tile> path = new ArrayList<>();
+    public LinkedList<Tile> reconstructPath(Tile current) {
+        LinkedList<Tile> path = new LinkedList<>();
 
         while (current != null) {
             path.add(current);

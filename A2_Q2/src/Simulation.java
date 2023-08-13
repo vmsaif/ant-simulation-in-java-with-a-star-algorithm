@@ -60,7 +60,7 @@ public class Simulation extends JPanel {
 
     public Simulation(int antNumber, int gameSpeed) {
         
-        probablityOfWater = 20; // 12%
+        probablityOfWater = 12; // 12%
         probablityOfFood = probablityOfWater/2; 
         probablityOfPoison = probablityOfFood/2;
         this.gameSpeed = gameSpeed;

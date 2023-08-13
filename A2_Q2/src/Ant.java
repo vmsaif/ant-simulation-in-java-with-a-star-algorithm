@@ -8,7 +8,7 @@
 */
 
 import java.awt.Graphics;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import javax.swing.ImageIcon;
 
 public class Ant {
@@ -18,7 +18,7 @@ public class Ant {
     private Tile home;
 
     private Tile[][] tiles;
-    private ArrayList<Tile> path;
+    private LinkedList<Tile> path;
     private int tileSize;
     private int direction;
 
@@ -181,7 +181,7 @@ public class Ant {
         path = aStarSearch.search(starTingLocation, goal);
     }
 
-    public ArrayList<Tile> getPath(Tile currTile) {
+    public LinkedList<Tile> getPath(Tile currTile) {
         return path;
     }
 
