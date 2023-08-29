@@ -1,18 +1,6 @@
 /* -----------------------------------------------------------------------------
     Author: Saif Mahmud
     Date: 2023-22-07
-    Course: COMP 452
-    Student ID: 3433058
-    Assignment: 2
-    Part: 1
-*/
-/* -----------------------------------------------------------------------------
-    Author: Saif Mahmud
-    Date: 2023-22-07
-    Course: COMP 452
-    Student ID: 3433058
-    Assignment: 2
-    Part: 2
 */
 import java.awt.Color;
 import java.awt.Graphics;

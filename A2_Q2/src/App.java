@@ -1,10 +1,6 @@
 /* -----------------------------------------------------------------------------
     Author: Saif Mahmud
     Date: 2023-22-07
-    Course: COMP 452
-    Student ID: 3433058
-    Assignment: 2
-    Part: 1
     Description: Main class to run the game
 */
 
