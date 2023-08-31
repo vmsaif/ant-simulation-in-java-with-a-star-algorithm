@@ -1,4 +1,4 @@
-# Ant Simulation
+# Ant Simulation in Java with A* Algorithm
 
 [![Hits](https://hits.sh/github.com/vmsaif/ant-simulation-in-java-with-a-star-algorithm.svg?label=Visits&color=100b75)](https://hits.sh/github.com/vmsaif/ant-simulation-in-java-with-a-star-algorithm/)
 
